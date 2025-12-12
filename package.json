@@ -1,6 +1,6 @@
 {
   "name": "@dano2906/medical-devices",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/mdevices.umd.js",
   "module": "dist/mdevices.es.js",
