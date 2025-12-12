@@ -1,12 +1,17 @@
 {
   "name": "@dano2906/medical-devices",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "./dist/mdevices.umd.js",
   "module": "./dist/mdevices.es.js",
-  "types": "./dist/index.d.ts",
-  "publishConfig": {
-    "access": "public"
+  "exports": {
+    ".": {
+      "import": "./dist/mdevices.es.js",
+      "require": "./dist/mdevices.umd.js"
+    }
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
     "dev": "vite",
