@@ -14,8 +14,8 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "./src/index.ts"),
       name: "medical-devices",
-      fileName: (format) => `mdevices.${format}.js`,
-      formats: ["es"],
+      fileName: (format) => `index.${format}.js`,
+      formats: ["es", "cjs"],
     },
     copyPublicDir: false,
     sourcemap: true,
