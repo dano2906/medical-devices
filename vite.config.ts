@@ -14,8 +14,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "./src/index.ts"),
       name: "medical-devices",
-      fileName: (format) => `index.${format}.js`,
-      formats: ["es", "cjs"],
+      fileName: () => `index.js`,
     },
     copyPublicDir: false,
     sourcemap: true,
@@ -31,7 +30,13 @@ export default defineConfig({
         "tailwind-merge",
       ],
       output: {
-        globals: { vue: "Vue" },
+        globals: {
+          vue: "Vue",
+          "class-variance-authority": "class-variance-authority",
+          "reka-ui": "reka-ui",
+          clsx: "clsx",
+          "tailwind-merge": "tailwind-merge",
+        },
       },
     },
   },
@@ -40,7 +45,6 @@ export default defineConfig({
     tailwindcss(),
     dts({
       insertTypesEntry: true,
-      rollupTypes: true,
       tsconfigPath: "./tsconfig.app.json",
       include: ["src"],
     }),
