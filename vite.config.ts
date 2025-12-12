@@ -32,10 +32,10 @@ export default defineConfig({
       output: {
         globals: {
           vue: "Vue",
-          "class-variance-authority": "class-variance-authority",
-          "reka-ui": "reka-ui",
+          "class-variance-authority": "classVarianceAuthority",
+          "reka-ui": "rekaUi",
           clsx: "clsx",
-          "tailwind-merge": "tailwind-merge",
+          "tailwind-merge": "tailwindMerge",
         },
       },
     },
