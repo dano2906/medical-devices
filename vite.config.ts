@@ -15,10 +15,21 @@ export default defineConfig({
       entry: path.resolve(__dirname, "./src/index.ts"),
       name: "medical-devices",
       fileName: (format) => `mdevices.${format}.js`,
-      formats: ["es", "umd"],
+      formats: ["es"],
     },
+    copyPublicDir: false,
+    sourcemap: true,
     rollupOptions: {
-      external: ["vue"],
+      external: [
+        "vue",
+        "tailwindcss",
+        "@tailwindcss/vite",
+        "reka-ui",
+        "lucide-vue-next",
+        "clsx",
+        "class-variance-authority",
+        "tailwind-merge",
+      ],
       output: {
         globals: { vue: "Vue" },
       },
@@ -31,6 +42,7 @@ export default defineConfig({
       insertTypesEntry: true,
       rollupTypes: true,
       tsconfigPath: "./tsconfig.app.json",
+      include: ["src"],
     }),
   ],
 });

@@ -32,9 +32,9 @@ declare type __VLS_WithTemplateSlots<T, S> = T & {
 
 export declare const Button: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 
-export declare type ButtonVariants = VariantProps<typeof buttonVariants>;
+declare type ButtonVariants = VariantProps<typeof buttonVariants>;
 
-export declare const buttonVariants: (props?: ({
+declare const buttonVariants: (props?: ({
     variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined;
     size?: "default" | "sm" | "lg" | "icon" | "icon-sm" | "icon-lg" | null | undefined;
 } & ClassProp) | undefined) => string;

@@ -1,13 +1,13 @@
 {
   "name": "@dano2906/medical-devices",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
-  "main": "dist/mdevices.umd.js",
+  "main": "dist/mdevices.es.js",
   "module": "dist/mdevices.es.js",
+  "types": "dist/mdevices.es.d.ts",
   "exports": {
     ".": {
-      "import": "dist/mdevices.es.js",
-      "require": "dist/mdevices.umd.js"
+      "import": "dist/mdevices.es.js"
     }
   },
   "engines": {
@@ -19,9 +19,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -39,6 +40,14 @@
     "typescript": "~5.9.3",
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.5.4",
-    "vue-tsc": "^3.1.4"
+    "vue-tsc": "^3.1.4",
+    "@tailwindcss/vite": "^4.1.18",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.560.0",
+    "reka-ui": "^2.6.1",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss": "^4.1.18",
+    "vue": "^3.5.24"
   }
 }
