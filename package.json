@@ -1,10 +1,13 @@
 {
-  "name": "medical-devices",
+  "name": "@dano2906/medical-devices",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/mdevices.umd.js",
   "module": "./dist/mdevices.es.js",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
